@@ -1,0 +1,73 @@
+.button {
+    height: 57px;
+    width: 115px;
+    border: 2px;
+    border-color: transparent;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border-radius: 0;
+    color: #fff4e9;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.7s;
+    background-color: #b88d61;
+  }
+  
+  .button:hover {
+    color: black;
+    background-color: #d3ac84;
+    cursor: pointer;
+    transition: 0.7s;
+  }
+
+  #header_bg button{
+    font-size: 16.5px;
+    font-family: 'Oswald',sans-serif;
+    /*color: #fff4e9;*/
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+}
+
+  .inv-button {
+    height: 50px;
+    width: 130px;
+    border: 2px solid #b88d61;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-radius: 0;
+    color: #1b0914;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.7s;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  .inv-button:hover {
+    color: #fff;
+    background-color: #b88d61;
+    box-shadow: 0 0 0 0 transparent;
+    cursor: pointer;
+    transition: 0.7s;
+  }
+
+  .soc-button {
+    height: 30px;
+    width: 30px;
+    padding: 0 0;
+    margin: 0 0 0 0;
+    border-radius: 4px;
+    color: #fff4e9;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.7s;
+    background-color: #b88d61;
+  }
+  
+  .soc-button:hover {
+    color: white;
+    background-color: #9f7347;
+    cursor: pointer;
+    transition: 0.7s;
+  }

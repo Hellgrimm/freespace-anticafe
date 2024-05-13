@@ -1,0 +1,35 @@
+.navbar-holder{
+    background: rgb(33 37 41);
+}
+
+.navbar-holder .container-fluid {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensures elements are spaced between */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping of navbar items */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none; /* Removes bullets */
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 0 10px; /* Adds horizontal padding between items */
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+}

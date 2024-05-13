@@ -1,15 +1,17 @@
-.navbar-holder{
-    background: rgb(33 37 41);
+.navbar-holder {
+    background: rgb(33, 37, 41); /* Ensure valid CSS syntax for RGB */
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .navbar-holder .container-fluid {
     max-width: 1200px;
-    width: 100%;
     display: flex;
-    justify-content: space-between; /* Ensures elements are spaced between */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Prevents wrapping of navbar items */
+    flex-wrap: nowrap;
 }
+
 
 .navbar-nav {
     display: flex;
@@ -32,4 +34,17 @@
 .user-container {
     display: flex;
     align-items: center;
+}
+
+.navbar-holder span{
+    color: aliceblue;
+}
+
+header > .header a{
+    font-size: 18px;
+    font-family: 'Laila',serif;
+    color: #ffffff;
+    line-height: normal;
+    font-weight: 400;
+    font-style: normal;
 }

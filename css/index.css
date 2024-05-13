@@ -47,73 +47,29 @@ p{
 }
 
 
-
-/*Header top */
-#header { 
-    background: rgb(255, 255, 255);
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-}
-
-header > .header .link-container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 5px;
-}
-
-@media (min-width: 990px) {
-
-    header > .header .link-container{
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-}
-@media (max-width: 990px){
-    header > .header .link-container{
-    display: none;
-    }
-}
-
-header > .header a{
-    font-size: 18px;
-    font-family: 'Laila',serif;
-    color: #1b0914;
-    line-height: normal;
-    font-weight: 400;
-    font-style: normal;
-}
-/**/
-
-
 /*Header text block*/
-header > .header-bottom {
+.header-bottom {
     background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/auto 100%;
 }
 
-header > .header-bottom > .header-bg > #header_bg > .hero > .hero-inner > .hero-text{
+.header-bottom > .header-bg > #header_bg > .hero > .hero-inner > .hero-text{
     text-align: center;
     margin-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-header > .header-bottom > .header-bg > #header_bg{
+.header-bottom > .header-bg > #header_bg{
     padding-left: 24px;
     padding-right: 24px;
 }
 
-header > .header-bottom > .header-bg{
+.header-bottom > .header-bg{
     padding-top: 130px;
     padding-bottom: 130px;
 }
 
-header > .header-bottom {
+.header-bottom {
     width: auto;
 }
 
@@ -126,35 +82,35 @@ header > .header-bottom {
     font-style: normal;
 }
 
-header > .header-bottom > .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space > .space-button{
+.header-bottom > .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space > .space-button{
     padding-left: auto;
     padding-right: auto;
 }
 
-header > .header-bottom >  .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space{
+.header-bottom >  .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-header > .header-bottom > .header-bg > #header_bg > .hero-button{
+.header-bottom > .header-bg > #header_bg > .hero-button{
     margin-top: 50px;
 }
 
 @media (min-width: 770px) {
-    header > .header-bottom > .header-bg > #header_bg{
+    .header-bottom > .header-bg > #header_bg{
         padding-left: 32px;
         padding-right: 32px;
     }
     
-    header > .header-bottom > .header-bg{
+    .header-bottom > .header-bg{
         padding-top: 250px;
         padding-bottom: 250px;
     }
 }
 
 @media (min-width: 990px) {
-    header > .header-bottom > .header-bg > #header_bg{
+    .header-bottom > .header-bg > #header_bg{
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -165,11 +121,11 @@ header > .header-bottom > .header-bg > #header_bg > .hero-button{
         font-size: 72px;
     }
 
-    header > .header-bottom {
+    .header-bottom {
         background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/100% auto;
     }
 
-    header > .header-bottom > .header-bg > #header_bg{
+    .header-bottom > .header-bg > #header_bg{
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;
@@ -177,7 +133,7 @@ header > .header-bottom > .header-bg > #header_bg > .hero-button{
     }
     
 
-    header > .header-bottom > .header-bg{
+    .header-bottom > .header-bg{
         padding-top: 250px;
         padding-bottom: 250px;
     }
@@ -671,7 +627,7 @@ a.a-rooms{
 
 
 /*Membership block*/
-.membership > .member-container > .member-block > .member-header > h2{
+.membership > .member-container > .member-block > .member-h2{
    color: #fff4e9;
 }
 

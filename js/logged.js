@@ -2,42 +2,72 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded and parsed');
     setupModalCloseBehavior();
     checkLoginStatus();
+    attachEventListeners();
+    checkLoginStatus();
+});
 
+
+function attachEventListeners() {
     const loginItem = document.getElementById('loginItem');
     if (loginItem) {
-        console.log('Login item found, attaching click event listener');
         loginItem.addEventListener('click', function() {
-            console.log('Login item clicked');
+            console.log('Login item clicked, showing login modal.');
             showLoginModal();
         });
     }
-});
+
+    const logoutItem = document.getElementById('logoutItem');
+    if (logoutItem) {
+        console.log('Logout item clicked, logging out.');
+        logoutItem.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default link behavior
+            logoutUser();
+        });
+    }
+            
+}
 
 function checkLoginStatus() {
-    const is_logged = localStorage.getItem('is_logged') === 'true'; // Retrieve login status from localStorage
-    initializeUserInterface(is_logged);
+    const is_logged = localStorage.getItem('is_logged') === 'true';
+    console.log(`Logged In Status: ${is_logged}`);
+    console.log(`User Name: ${localStorage.getItem('username')}`);
+    console.log(`User Balance: ${localStorage.getItem('user_balance')}`);
+
+    // Use proper syntax for the if statement
+    if (is_logged) {
+        console.log(`checkLoginStatus true`);
+        initializeUserInterface(true);
+        
+    } else {
+        console.log(`checkLoginStatus false`);
+        initializeUserInterface(false);
+        
+    }
 }
 
 function initializeUserInterface(is_logged) {
-    console.log('Initializing user interface based on login status:', is_logged);
+    console.log('Initializing user interface. Logged in:', is_logged);
     const userNameItem = document.getElementById('userNameItem');
     const balanceItem = document.getElementById('balanceItem');
     const loginItem = document.getElementById('loginItem');
     const logoutItem = document.getElementById('logoutItem');
     const settingsItem = document.getElementById('settingsItem');
 
+    console.log('Elements:', { userNameItem, balanceItem, loginItem, logoutItem, settingsItem });
+
     if (is_logged) {
-        console.log('User is logged in');
+        console.log('Setting UI for logged in state.');
+        console.log('userNameItem:', document.getElementById('userNameItem'));
+        console.log('balanceItem:', document.getElementById('balanceItem'));
+        userNameItem.textContent = localStorage.getItem('username');
+        balanceItem.textContent = 'Balance: ' + localStorage.getItem('user_balance') + ' UAH';
         userNameItem.style.display = 'block';
         balanceItem.style.display = 'block';
         loginItem.style.display = 'none';
         logoutItem.style.display = 'block';
         settingsItem.style.display = 'block';
-
-        userNameItem.textContent = localStorage.getItem('user_name');
-        balanceItem.textContent = 'Balance: ' + localStorage.getItem('user_balance') + ' UAH';
     } else {
-        console.log('User is not logged in');
+        console.log('Setting UI for logged out state.');
         userNameItem.style.display = 'none';
         balanceItem.style.display = 'none';
         loginItem.style.display = 'block';
@@ -45,6 +75,37 @@ function initializeUserInterface(is_logged) {
         settingsItem.style.display = 'none';
     }
 }
+
+
+function logoutUser() {
+    console.log('Logging out');
+    localStorage.setItem('is_logged', 'false');  // Directly set the is_logged flag in localStorage
+    localStorage.removeItem('authToken');        // Clean up the authToken
+    localStorage.removeItem('username');        // Remove user's name from localStorage
+    localStorage.removeItem('user_balance');     // Remove user's balance from localStorage
+    localStorage.removeItem('user_email');       // Remove user's email from localStorage
+
+    // Call initializeUserInterface with false to update the UI to a "logged out" state
+    initializeUserInterface(false);
+}
+
+
+function showLoginModal() {
+    const modalContainer = document.getElementById('loginModalContainer');
+    const modal = document.getElementById('loginModal');
+    modalContainer.style.display = 'block';
+    modal.style.display = 'block';
+    console.log('Login modal is now visible.');
+}
+
+function hideLoginModal() {
+    const modalContainer = document.getElementById('loginModalContainer');
+    const modal = document.getElementById('loginModal');
+    modalContainer.style.display = 'none';
+    modal.style.display = 'none';
+    console.log('Modal and modal container are now hidden.');
+}
+
 
 
 function setupModalCloseBehavior() {
@@ -124,6 +185,7 @@ function loadLoginForm() {
         .catch(error => {
             console.error('Failed to load login form:', error);
         });
+        
 }
 
 function handleLogin(event) {
@@ -131,7 +193,8 @@ function handleLogin(event) {
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('pass').value;
-    const keepSignedIn = document.getElementById('check').checked;
+
+    console.log('Attempting login with:', email, password);
 
     // This should be a dedicated endpoint for login that checks credentials
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:ZOHOxVVb/auth/login', {  
@@ -146,7 +209,6 @@ function handleLogin(event) {
     })
     .then(response => {
         if (!response.ok) {
-            // Parse the response to get error details if possible
             return response.json().then(data => {
                 throw new Error(data.message || `HTTP status ${response.status}`);
             });
@@ -154,21 +216,27 @@ function handleLogin(event) {
         return response.json();
     })
     .then(data => {
-        if (data.is_logged) {
-            console.log('Login successful:', data);
+        console.log('Login response:', data);
+        if (data.authToken) {  // Check if an authToken is received
+            console.log('Login successful, token received:', data.authToken);
             localStorage.setItem('is_logged', 'true');
-            localStorage.setItem('user_name', data.user_name || username);  // Store additional user data as needed
+            localStorage.setItem('authToken', data.authToken);
+            localStorage.setItem('username', data.user.username);
+            localStorage.setItem('user_balance', data.user.sum);
+            localStorage.setItem('user_email', data.user.email);
             hideLoginModal();
-            initializeUserInterface(true);
+            checkLoginStatus();
+            initializeUserInterface(true);  // Explicit call to update the UI
         } else {
-            alert('Login failed: ' + (data.message || 'Invalid credentials'));
+            alert('Login failed: No authentication token received');
         }
     })
     .catch(error => {
         console.error('Login error:', error);
-        alert('Login error: ' + error.message);  // Improved error feedback
-    });    
+        alert('Login error: ' + error.message);
+    });
 }
+
 
 function handleRegister(event) {
     event.preventDefault(); // Prevent the default form submission behavior
@@ -214,12 +282,4 @@ function handleRegister(event) {
         console.error('Registration error:', error);
         alert('Registration error: ' + error.message);
     });
-}
-
-
-function logoutUser() {
-    localStorage.setItem('is_logged', 'false');
-    localStorage.removeItem('user_name');
-    localStorage.removeItem('user_balance');
-    initializeUserInterface(false);
 }

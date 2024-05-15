@@ -47,97 +47,108 @@ p{
 }
 
 
-/*Header text block*/
-.hero-bottom {
-    background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/auto 100%;
+/*block*/
+
+/**/
+
+
+
+/*Cart block*/
+.cart {
+    align-items: center;
+    background-color: #f8f9fa;
 }
 
-.hero-bottom > .hero-bg > #hero_bg > .hero > .hero-inner > .hero-text{
-    text-align: center;
-    margin-top: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.hero-bottom > .hero-bg > #hero_bg{
+.cart > .cart-block {
     padding-left: 24px;
     padding-right: 24px;
-}
-
-.hero-bottom > .hero-bg{
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-
-.hero-bottom {
-    width: auto;
-}
-
-.hero-text {
-    font-size: 42px;
-    font-family: 'Oswald', sans-serif;
-    color: #ffffff;
-    font-weight: 500;
-    line-height: inherit;
-    font-style: normal;
-}
-
-.hero-bottom > .hero-bg > #hero_bg > .hero-button > .inbutton > .inbutton-space > .space-button{
-    padding-left: auto;
-    padding-right: auto;
-}
-
-.hero-bottom >  .hero-bg > #hero_bg > .hero-button > .inbutton > .inbutton-space{
-    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
 }
 
-.hero-bottom > .hero-bg > #hero_bg > .hero-button{
-    margin-top: 50px;
+.cart-container {
+    display: flex; /* Set the container to flex to align children side by side */
+    align-items: center; /* Align children vertically in the center */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff; /* Optional: Added for better visibility */
+    position: relative; /* Set relative positioning context for absolute children */
 }
 
-@media (min-width: 770px) {
-    .hero-bottom > .hero-bg > #hero_bg{
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    
-    .hero-bottom > .hero-bg{
-        padding-top: 250px;
-        padding-bottom: 250px;
-    }
+.cart-container .cart-text-block {
+    flex-grow: 1; /* Takes up remaining space */
+    margin-right: 10px; /* Optional: Add some space between the text and button */
 }
 
-@media (min-width: 990px) {
-    .hero-bottom > .hero-bg > #hero_bg{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+.cart-container .cart-btn-block {
+    flex-shrink: 0; /* Prevents the button block from shrinking */
 }
 
-@media (min-width: 1280px) {
-    .hero-text {
-        font-size: 72px;
-    }
-
-    .hero-bottom {
-        background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/100% auto;
-    }
-
-    .hero-bottom > .hero-bg > #hero_bg{
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-
-    .hero-bottom > .hero-bg{
-        padding-top: 250px;
-        padding-bottom: 250px;
-    }
+.cart-container p, .cart-container button {
+    margin: 5px 0;
 }
+
+.book-overlay {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    bottom: 0; /* Position at the bottom of cart-container */
+    left: 0; /* Position at the left of cart-container */
+    width: 1152px;
+    z-index: 100; /* Ensure it sits above other content */
+    transform: translateY(100%); /* Move overlay below the container */
+    display: none; /* Initially hidden */
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.book-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.book-info {
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.book-info .book_name {
+    font-weight: bold;
+}
+
+.book-price {
+    white-space: nowrap;
+}
+
+#item-count:hover + #book-overlay {
+    display: block;
+}
+
+.close-btn {
+    padding: 0 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
 /**/
 
 

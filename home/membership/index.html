@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+     type="image/png"
+     href="/img/cozy_corner_logo_circl.png">
+    <title>embership - Cozy Corner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/controls.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/img.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/header-footer.css">
+    <link rel="stylesheet" type="text/css" href="membership.css">
+</head>
+
+<body>
+    <header style="position: sticky; top: 0; z-index: 1030;">
+        <div id="headerDiv"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                fetch('/reusable/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('headerDiv').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading the header:', error));
+            });
+        </script>
+    </header>
+
+    <main>
+        <div class="membership">
+            <div class="member-container">
+                <div class="member-block">
+                    <div class="member-header">
+                        <h2>Membership</h2>
+                    </div>
+                    <p>Enjoy yourself at FreeSpace? Now you can visit FreeSpace every day with your own FreeSpace Club Membership. Get exclusive access to your favorite FreeSpace outlet for less than $30 a day! For $300 you can use all of our facilities the entire month.</p>
+                    <form action="#Form">
+                        <button class="button" >Become a member</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+
+        <div id="pricing" class="pricing">
+            <div class="pricing-container">
+                <div class="pricing-header">
+                    <h2>Pricing</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                    
+                        <div class="cal">
+                            <div class="card shadow-sm">
+                                <h3>Day Pass</h3>
+                                <div class="pricing-img" >
+                                 <img src="/img/pricing/day.svg" alt="Day Pass">
+                                </div>
+                                <h2>$25</h2>
+                                <small class="text-muted">per day</small>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <button class="inv-button"><a href="#Form" >Purchase</a></button>
+                            </div>
+                        </div>
+
+                        <div class="cal">
+                            <div class="card shadow-sm">
+                                <h3>Nightly Pass</h3>
+                                <div class="pricing-img" >
+                                 <img src="/img/pricing/night.svg" alt="Nightly Pass">
+                                </div>
+                                <h2>$15</h2>
+                                <small class="text-muted">per night</small>
+                                <p class="card-text">The Nightly Pass provides full access during our night-time hours. Night access at FreeSpace anti-cafe is fully automated, and so customers will receive a key fob.</p>
+                                <button class="inv-button"><a href="#Form" >Purchase</a></button>
+                            </div>
+                        </div>
+
+                        <div class="cal">
+                            <div class="card shadow-sm">
+                                <h3>7-Day Pass</h3>
+                                <div class="pricing-img" >
+                                 <img src="/img/pricing/7day.svg" alt="7-Day Pass">
+                                </div>
+                                <h2>$125</h2>
+                                <small class="text-muted">one week</small>
+                                <p class="card-text">With the 7-Day Pass customers can pick and choose which days they want to come in during daily hours. You get full access to the space and equipment for 7 days.</p>
+                                <button class="inv-button"><a href="#Form" >Purchase</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

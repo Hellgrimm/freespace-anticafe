@@ -1,0 +1,182 @@
+/*Membership block*/
+.membership > .member-container > .member-block > .member-header > h2{
+    color: #fff4e9;
+ }
+ 
+ .membership > .member-container > .member-block > p {
+     color: #fff4e9;
+ }
+ 
+ .membership > .member-container > .member-block > form > .button{
+     color: #fff4e9;
+     border-width: 2px;
+     width: auto;
+     padding-left: 15px;
+     padding-right: 15px;
+ }
+ 
+ .membership > .member-container > .member-block{
+     max-width: 740px;
+ }
+ 
+ .membership > .member-container{
+     padding-left: 24px;
+     padding-right: 24px;
+     text-align: center;
+ }
+ 
+ .membership{
+     padding-top: 80px;
+     padding-bottom: 90px;
+     background: linear-gradient(rgba(75, 48, 78, 0.6),rgba(75, 48, 78, 0.6)), url(/img/membership/crew.jpg) 50% 50% / cover no-repeat fixed;
+ }
+ 
+ @media (min-width: 770px) {
+     .membership > .member-container > .member-block{
+         margin-left: auto;
+         margin-right: auto;
+     } 
+ 
+     .membership > .member-container{
+         padding-left: 32px;
+         padding-right: 32px;
+     }
+     .membership{
+         padding-top: 80px;
+         padding-bottom: 95px;
+     }
+ }
+ 
+ @media (min-width: 990px) {
+     .membership > .member-container{
+         padding-left: 40px;
+         padding-right: 40px;
+     }
+     .membership{
+         padding-top: 80px;
+         padding-bottom: 100px;
+     }
+ }
+ 
+ @media (min-width: 1280px) {
+ 
+     .membership > .member-container{
+         padding-left: 15px;
+         padding-right: 15px;
+     }
+ }
+ /**/
+
+ /*Pricing block*/
+.prising .inv-button{
+    color:#fff;
+}
+
+.pricing .card p{
+    color:#fff4e9;
+}
+
+.pricing .card h3{
+    color:#fff;
+}
+
+.pricing .card h2{
+    color:#fff;
+}
+
+.pricing > .pricing-container > .container .cal > .card > .pricing-img > img{
+    width: 100%;
+}
+
+.pricing > .pricing-container > .container .cal > .card > .pricing-img{
+    margin-top: 15px;
+    width: 70px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pricing > .pricing-container > .container .cal > .card > h2{
+    margin-top: 20px;
+}
+
+.pricing > .pricing-container > .container .cal > .card > small{
+    margin-top: 2px;
+}
+
+.pricing > .pricing-container > .container .cal > .card > p{
+    margin-top: 15px;
+}
+
+.pricing > .pricing-container > .container .cal > .card > button > a{
+    color: #fff;
+}
+
+.pricing > .pricing-container > .container .cal > .card{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
+    border: 0px;
+    background-color: rgb(27, 9, 20);
+    text-align: center;
+    border-radius:0;
+    align-items: center;
+    min-height: 550px;
+}
+
+.pricing > .pricing-container > .container .cal{
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pricing > .pricing-container > .container > .row{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.pricing > .pricing-container > .container{
+    margin-top: 45px;
+    padding: 0 0 0 0;
+    max-width: 1200px;
+}
+
+.pricing > .pricing-container{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.pricing{
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 90px;
+    background-color: #ffffff;
+}
+
+@media (min-width: 770px) {
+    .pricing > .pricing-container > .container > .row > .cal > .card{
+        min-height: 640px;
+    }
+
+    .pricing > .pricing-container > .container > .row > .cal{
+        width: 40%;
+    }
+
+    .pricing > .pricing-container > .container > .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 990px) {
+    .pricing > .pricing-container > .container > .row > .cal{
+        width: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pricing > .pricing-container > .container > .row > .cal > .card{
+        min-height: 550px;
+    }
+}
+/**/

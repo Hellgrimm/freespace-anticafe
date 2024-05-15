@@ -48,28 +48,28 @@ p{
 
 
 /*Header text block*/
-.header-bottom {
+.hero-bottom {
     background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/auto 100%;
 }
 
-.header-bottom > .header-bg > #header_bg > .hero > .hero-inner > .hero-text{
+.hero-bottom > .hero-bg > #hero_bg > .hero > .hero-inner > .hero-text{
     text-align: center;
     margin-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.header-bottom > .header-bg > #header_bg{
+.hero-bottom > .hero-bg > #hero_bg{
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.header-bottom > .header-bg{
+.hero-bottom > .hero-bg{
     padding-top: 130px;
     padding-bottom: 130px;
 }
 
-.header-bottom {
+.hero-bottom {
     width: auto;
 }
 
@@ -82,35 +82,35 @@ p{
     font-style: normal;
 }
 
-.header-bottom > .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space > .space-button{
+.hero-bottom > .hero-bg > #hero_bg > .hero-button > .inbutton > .inbutton-space > .space-button{
     padding-left: auto;
     padding-right: auto;
 }
 
-.header-bottom >  .header-bg > #header_bg > .hero-button > .inbutton > .inbutton-space{
+.hero-bottom >  .hero-bg > #hero_bg > .hero-button > .inbutton > .inbutton-space{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.header-bottom > .header-bg > #header_bg > .hero-button{
+.hero-bottom > .hero-bg > #hero_bg > .hero-button{
     margin-top: 50px;
 }
 
 @media (min-width: 770px) {
-    .header-bottom > .header-bg > #header_bg{
+    .hero-bottom > .hero-bg > #hero_bg{
         padding-left: 32px;
         padding-right: 32px;
     }
     
-    .header-bottom > .header-bg{
+    .hero-bottom > .hero-bg{
         padding-top: 250px;
         padding-bottom: 250px;
     }
 }
 
 @media (min-width: 990px) {
-    .header-bottom > .header-bg > #header_bg{
+    .hero-bottom > .hero-bg > #hero_bg{
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -121,11 +121,11 @@ p{
         font-size: 72px;
     }
 
-    .header-bottom {
+    .hero-bottom {
         background: linear-gradient( rgba(44, 29, 46, 0.5),rgba(44, 29, 46, 0.5)), url(../img/header/header.jpg) no-repeat center/100% auto;
     }
 
-    .header-bottom > .header-bg > #header_bg{
+    .hero-bottom > .hero-bg > #hero_bg{
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;
@@ -133,7 +133,7 @@ p{
     }
     
 
-    .header-bottom > .header-bg{
+    .hero-bottom > .hero-bg{
         padding-top: 250px;
         padding-bottom: 250px;
     }
@@ -142,70 +142,66 @@ p{
 
 
 
-/*Concept block*/
-.concept > .concept-block > .concept-text > h2 {
+/*Аdvertisement block*/
+.advertisement > .advertisement-block > .advertisement-text > h2 {
     text-align: center;
     margin: 0 0 0 0;
 }
 
-.concept > .concept-block > .concept-text > p {
+.advertisement > .advertisement-block > .advertisement-text > p {
     text-align: center;
     margin: 25px 0 0 0;
 }
 
-.concept > .concept-block {
+.advertisement > .advertisement-block {
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.concept {
+.advertisement {
     align-items: center;
-    padding-top: 85px;
-    padding-bottom: 90px;
 }
 
-.concept > .concept-block > .concept-button > .concept-button-block {
+.advertisement > .advertisement-block > .advertisement-button > .advertisement-button-block {
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.concept > .concept-block > .concept-button {
+.advertisement > .advertisement-block > .advertisement-button {
     margin-top: 50px;
 }
 
 @media (min-width: 770px) {
-    .concept > .concept-block {
+    .advertisement > .advertisement-block {
         padding-left: 100px;
         padding-right: 100px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .concept {
+    .advertisement {
         align-items: center;
-        padding-top: 85px;
-        padding-bottom: 95px;
     }
 }
 
 @media (min-width: 990px) {
-    .concept > .concept-block {
+    .advertisement > .advertisement-block {
         padding-left: 100px;
         padding-right: 100px;
     }
 
-    .concept {
+    .advertisement {
         align-items: center;
-        padding-top: 85px;
-        padding-bottom: 100px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 
 @media (min-width: 1280px) {
-    .concept > .concept-block {
-        max-width: 800px;
+    .advertisement > .advertisement-block {
+        max-width: 1200px;
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;

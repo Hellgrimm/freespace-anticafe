@@ -22,7 +22,7 @@
         <div id="headerDiv"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                fetch('../reusable/header.html')
+                fetch('/reusable/header.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('headerDiv').innerHTML = html;

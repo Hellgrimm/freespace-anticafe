@@ -180,15 +180,15 @@ h3.h-can-do{
 }
 
 .wcyd > .wcyd-container > .container .wcyd-card > .enjoy-sad{
-    background: no-repeat center /auto 100% url(/img/what-you-can-do/coffee-break.png);
+    background: no-repeat center /auto 100% url(../img/what-you-can-do/coffee-break.png);
 }
 
 .wcyd > .wcyd-container > .container .wcyd-card > .communicate{
-    background: no-repeat center /auto 100% url(/img/what-you-can-do/business-meeting.png);
+    background: no-repeat center /auto 100% url(../img/what-you-can-do/business-meeting.png);
 }
 
 .wcyd > .wcyd-container > .container .wcyd-card > .work{
-    background: no-repeat center /auto 100% url(/img/what-you-can-do/working-table.png);
+    background: no-repeat center /auto 100% url(../img/what-you-can-do/working-table.png);
 }
 
 .wcyd > .wcyd-container > .container .wcyd-card > .wcyd-body{
@@ -234,29 +234,29 @@ h3.h-can-do{
 
 @media (min-width: 500px) {
     .wcyd > .wcyd-container > .container .wcyd-card > .enjoy-sad{
-        background: no-repeat center /100% auto url(/img/what-you-can-do/coffee-break.png);
+        background: no-repeat center /100% auto url(../img/what-you-can-do/coffee-break.png);
     }
     
     .wcyd > .wcyd-container > .container .wcyd-card > .communicate{
-        background: no-repeat center /100% auto url(/img/what-you-can-do/business-meeting.png);
+        background: no-repeat center /100% auto url(../img/what-you-can-do/business-meeting.png);
     }
     
     .wcyd > .wcyd-container > .container .wcyd-card > .work{
-        background: no-repeat center /100% auto url(/img/what-you-can-do/working-table.png);
+        background: no-repeat center /100% auto url(../img/what-you-can-do/working-table.png);
     }
 }
 
 @media (min-width: 770px) {
     .wcyd > .wcyd-container > .container .wcyd-card > .enjoy-sad{
-        background: no-repeat center /auto 100% url(/img/what-you-can-do/coffee-break.png);
+        background: no-repeat center /auto 100% url(../img/what-you-can-do/coffee-break.png);
     }
     
     .wcyd > .wcyd-container > .container .wcyd-card > .communicate{
-        background: no-repeat center /auto 100% url(/img/what-you-can-do/business-meeting.png);
+        background: no-repeat center /auto 100% url(../img/what-you-can-do/business-meeting.png);
     }
     
     .wcyd > .wcyd-container > .container .wcyd-card > .work{
-        background: no-repeat center /auto 100% url(/img/what-you-can-do/working-table.png);
+        background: no-repeat center /auto 100% url(../img/what-you-can-do/working-table.png);
     }
 
     .wcyd > .wcyd-container > .container > .row > .wcyd-card > .wcyd-body{
